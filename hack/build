@@ -47,6 +47,13 @@ function client()
     $GOBUILD -o $CLI_BINARY_NAME github.com/alibaba/pouch/cli
 }
 
+function update_container_meta()
+{
+    cd $BUILDPATH/src/github.com/alibaba/pouch
+    echo "$GOBUILD -o update_container_meta github.com/alibaba/pouch/cmd/backup"
+    $GOBUILD -o update_container_meta github.com/alibaba/pouch/cmd/backup
+}
+
 #
 # Do not calculate the coverage for the following pkgs
 #

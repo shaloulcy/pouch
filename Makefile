@@ -26,6 +26,10 @@ server: pre modules
 client: pre
 	@./hack/build client
 
+.PHONY: update_container_meta
+update_container_meta: pre
+	@./hack/build update_container_meta
+
 .PHONY: testserver
 testserver: pre modules
 	@./hack/build testserver
